@@ -18,7 +18,7 @@ Each student must complete 3 pages in total:
 - [ ] Choose ONE of the following:
  
     - [ ] Page 2
-    - [ ]Page 3
+    - [ ] Page 3
 
 Students may complete all 4 pages if they wish, but the minimum requirement is 3 pages.
 
@@ -32,15 +32,15 @@ Students must replace all placeholder text with their own information.
 On Page 4 (User Profile), the following information must be included:
 
  - [ ] Student Name: Your full name  
- - [ ]Student ID: Your IUB ID  
- - [ ]Student Email: Your IUB email (example: yourname@iub.edu.bd)  
- - [ ]Bio / Story: A short personal bio or any story you would like to include.
+ - [ ] Student ID: Your IUB ID  
+ - [ ] Student Email: Your IUB email (example: yourname@iub.edu.bd)  
+ - [ ] Bio / Story: A short personal bio or any story you would like to include.
 
 
 Navigation Requirement
 
 The bottom navigation between pages must be implemented using:
- - [ ]<del>PageView</del>
+ - [x] PageView
  - [x] PageController
 
 A sample code snippet is available in the Figma design showing how to implement this.
@@ -54,7 +54,7 @@ Students must submit the following:
  
  - [x] Repo name: assignment-two-flutter_UI-YOUR_NAME-YOUR_IUB_ID
  
- - [ ]Upload the full Flutter project to GitHub
+ - [ ] Upload the full Flutter project to GitHub
  
  - [x] The repository must be Public so it can be accessed for evaluation
  

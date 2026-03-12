@@ -3,14 +3,14 @@ import 'package:intl/intl.dart';
 import '../theme.dart';
 import '../models/transaction.dart';
 
-class HomeWithTabs extends StatelessWidget {
+class HomeWithTabs extends StatefulWidget {
   const HomeWithTabs({super.key});
-  static const double _moneyAmount = 8945.32;
-  static const double _savingsAmount = 5500;
-  static const double _last30Days = 300;
 
-  static List<Container> _transactionCards = [];
+  @override
+  State<HomeWithTabs> createState() => _HomeWithTabsState();
+}
 
+class _HomeWithTabsState extends State<HomeWithTabs> {
   static String formatWithCommas(num number) {
     NumberFormat formatter = NumberFormat.decimalPattern("en_US");
 
@@ -28,10 +28,12 @@ class HomeWithTabs extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    List<int> moneyAmountSplit = splitMoneyAmount(_moneyAmount);
-    _transactionCards.clear();
+    // get these from context
+    const double moneyAmount = 8945.32;
+    const double savingsAmount = 5500;
+    const double last30Days = 300;
 
-    _transactionCards.addAll([
+    List<Container> transactionCards = [
       _transactionCard(
         transactionData: Transaction(
           name: "Netflix Subscription",
@@ -77,7 +79,9 @@ class HomeWithTabs extends StatelessWidget {
           transactionType: Transaction.TYPE_EXPENSE,
         ),
       ),
-    ]);
+    ];
+
+    List<int> moneyAmountSplit = splitMoneyAmount(moneyAmount);
 
     return Padding(
       padding: EdgeInsets.all(10),
@@ -88,9 +92,13 @@ class HomeWithTabs extends StatelessWidget {
             spacing: 30,
 
             children: [
-              _balanceStats(moneyAmountSplit),
+              _balanceStats(
+                moneyAmountSplit: moneyAmountSplit,
+                savingsAmount: savingsAmount,
+                last30Days: last30Days,
+              ),
               _navigationCards(),
-              _transactionCardList(),
+              _transactionCardList(transactionCards: transactionCards),
             ],
           ),
         ],
@@ -98,10 +106,10 @@ class HomeWithTabs extends StatelessWidget {
     );
   }
 
-  Padding _transactionCardList() {
+  Padding _transactionCardList({required List<Container> transactionCards}) {
     List<Widget> transactionCardWidgets = [];
 
-    transactionCardWidgets.addAll(_transactionCards);
+    transactionCardWidgets.addAll(transactionCards);
     return Padding(
       padding: EdgeInsets.only(bottom: 50, left: 10, right: 10),
       child: Column(
@@ -124,7 +132,7 @@ class HomeWithTabs extends StatelessWidget {
               ),
             ],
           ),
-          Column(spacing: 8, children: _transactionCards),
+          Column(spacing: 8, children: transactionCards),
         ],
       ),
     );
@@ -247,7 +255,11 @@ class HomeWithTabs extends StatelessWidget {
     );
   }
 
-  Container _balanceStats(List<int> moneyAmountSplit) {
+  Container _balanceStats({
+    required List<int> moneyAmountSplit,
+    required double savingsAmount,
+    required double last30Days,
+  }) {
     return Container(
       padding: EdgeInsets.all(20),
       decoration: BoxDecoration(
@@ -295,7 +307,7 @@ class HomeWithTabs extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                'Savings: \$${formatWithCommas(_savingsAmount)}',
+                'Savings: \$${formatWithCommas(savingsAmount)}',
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w500,
@@ -304,7 +316,7 @@ class HomeWithTabs extends StatelessWidget {
               Row(
                 children: [
                   Text(
-                    'Last 30 days: +\$$_last30Days',
+                    'Last 30 days: +\$$last30Days',
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.w100,

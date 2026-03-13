@@ -14,11 +14,11 @@ The Figma design contains 4 pages.
 Each student must complete 3 pages in total:
 
 - [x] Page 1 – Mandatory
-- [ ] Page 4 – Mandatory
-- [ ] Choose ONE of the following:
- 
-    - [ ] Page 2
-    - [ ] Page 3
+- [x] Page 4 – Mandatory
+- [x] Choose ONE of the following:
+
+    - [x] Page 2
+    - [x] Page 3
 
 Students may complete all 4 pages if they wish, but the minimum requirement is 3 pages.
 
@@ -27,14 +27,14 @@ Personal Information
 
 Students must replace all placeholder text with their own information.
 
-- [ ] Where the design shows “STUDENT NAME” in capital letters, replace it with your own name.
+- [x] Where the design shows “STUDENT NAME” in capital letters, replace it with your own name.
 
 On Page 4 (User Profile), the following information must be included:
 
- - [ ] Student Name: Your full name  
- - [ ] Student ID: Your IUB ID  
- - [ ] Student Email: Your IUB email (example: yourname@iub.edu.bd)  
- - [ ] Bio / Story: A short personal bio or any story you would like to include.
+ - [x] Student Name: Your full name  
+ - [x] Student ID: Your IUB ID  
+ - [x] Student Email: Your IUB email (example: yourname@iub.edu.bd)  
+ - [x] Bio / Story: A short personal bio or any story you would like to include.
 
 
 Navigation Requirement
@@ -54,7 +54,7 @@ Students must submit the following:
  
  - [x] Repo name: assignment-two-flutter_UI-YOUR_NAME-YOUR_IUB_ID
  
- - [ ] Upload the full Flutter project to GitHub
+ - [x] Upload the full Flutter project to GitHub
  
  - [x] The repository must be Public so it can be accessed for evaluation
  
@@ -62,18 +62,18 @@ Students must submit the following:
 
 2. App Demo Video
  
- - [ ] A mobile screen recording of the developed app
+ - [x] A mobile screen recording of the developed app
  
- - [ ] The video must clearly show:
+ - [x] The video must clearly show:
    
-    - [ ] All implemented pages
-    - [ ] Navigation between pages
-    - [ ] Click interactions and functionality
- - [ ] MUST DO: Attach the video in GOOGLE CLASS ROOM Submission
+    - [x] All implemented pages
+    - [x] Navigation between pages
+    - [x] Click interactions and functionality
+ - [x] MUST DO: Attach the video in GOOGLE CLASS ROOM Submission
 
 **Important Notes**
 
-- [ ] Follow the Figma design as closely as possible.
-- [ ] Replace all placeholder information with your own details.
-- [ ] Ensure navigation between pages works properly.
+- [x] Follow the Figma design as closely as possible.
+- [x] Replace all placeholder information with your own details.
+- [x] Ensure navigation between pages works properly.
 - [x] Make sure the submitted GitHub repository is accessible.

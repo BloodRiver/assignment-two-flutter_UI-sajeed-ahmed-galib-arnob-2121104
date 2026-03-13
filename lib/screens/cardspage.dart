@@ -21,7 +21,7 @@ class _CardsWithTabsState extends State<CardsWithTabs> {
         child: Column(
           children: [
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 10),
+              padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
               child: Column(
                 spacing: 20,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -203,16 +203,16 @@ class _CardsWithTabsState extends State<CardsWithTabs> {
                       widget.loggedInStudent.name.toUpperCase(),
                       style: TextStyle(
                         color: Colors.white,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
                       ),
                     ),
                     Text(
                       "12/28",
                       style: TextStyle(
                         color: Colors.white,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 12,
+                        fontWeight: FontWeight.bold,
+                        fontSize: 14,
                       ),
                     ),
                   ],

@@ -23,7 +23,8 @@ class _MyScreenState extends State<MyScreen> {
       name: "Sajeed Ahmed Galib Arnob",
       id: "2121104",
       email: "2121104@iub.edu.bd",
-      bio: "Just A Rather Very Enthusiastic Programmer",
+      bio:
+          "Just A Rather Very Enthusiastic Programmer, balancing studies with tutions and building side projects. I believe health is the greatest wealth but money is also important. Because money doesn't buy happiness, it buys CRAZY happiness.",
     );
 
     return Scaffold(
@@ -74,7 +75,7 @@ class _MyScreenState extends State<MyScreen> {
         ),
         Text(
           loggedInStudent.name.toUpperCase(),
-          style: TextStyle(fontWeight: FontWeight.w900),
+          style: TextStyle(fontWeight: FontWeight.w900, fontSize: 14),
         ),
       ],
     );

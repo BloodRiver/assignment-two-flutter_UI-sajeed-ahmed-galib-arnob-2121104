@@ -47,7 +47,7 @@ SingleChildScrollView navigationCards({
           minWidth: MediaQuery.of(context).size.width,
         ),
         child: Padding(
-          padding: const EdgeInsets.all(16),
+          padding: const EdgeInsets.only(bottom: 10),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             crossAxisAlignment: CrossAxisAlignment.center,

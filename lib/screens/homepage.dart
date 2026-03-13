@@ -42,6 +42,7 @@ class _HomeWithTabsState extends State<HomeWithTabs> {
           when: "Today",
           amount: 19.99,
           transactionType: Transaction.TYPE_EXPENSE,
+          icon: Icon(Icons.ondemand_video),
         ),
       ),
       _transactionCard(
@@ -51,6 +52,7 @@ class _HomeWithTabsState extends State<HomeWithTabs> {
           when: "Today",
           amount: 4.50,
           transactionType: Transaction.TYPE_EXPENSE,
+          icon: Icon(Icons.coffee),
         ),
       ),
       _transactionCard(
@@ -60,6 +62,7 @@ class _HomeWithTabsState extends State<HomeWithTabs> {
           when: "Yesterday",
           amount: 3500,
           transactionType: Transaction.TYPE_INCOME,
+          icon: Icon(Icons.attach_money),
         ),
       ),
       _transactionCard(
@@ -69,6 +72,7 @@ class _HomeWithTabsState extends State<HomeWithTabs> {
           when: "Today",
           amount: 55.80,
           transactionType: Transaction.TYPE_EXPENSE,
+          icon: Icon(Icons.shopping_cart),
         ),
       ),
       _transactionCard(
@@ -78,6 +82,7 @@ class _HomeWithTabsState extends State<HomeWithTabs> {
           when: "Today",
           amount: 120.45,
           transactionType: Transaction.TYPE_EXPENSE,
+          icon: Icon(Icons.shopping_cart),
         ),
       ),
     ];
@@ -170,7 +175,7 @@ class _HomeWithTabsState extends State<HomeWithTabs> {
           Row(
             spacing: 10,
             children: [
-              Icon(Icons.ac_unit),
+              transactionData.icon,
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [

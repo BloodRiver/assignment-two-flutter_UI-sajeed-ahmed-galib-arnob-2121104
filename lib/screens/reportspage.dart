@@ -25,7 +25,7 @@ class _ReportsWithTabsState extends State<ReportsWithTabs> {
               ),
               _totalExpensesDisplay(),
               _spendingBreakdown(),
-              SizedBox(height: 300),
+              SizedBox(height: 200),
             ],
           ),
         ],

@@ -222,35 +222,43 @@ class _HomeWithTabsState extends State<HomeWithTabs> {
     );
   }
 
-  SizedBox _navigationCards() {
-    return SizedBox(
-      height: 150,
-      child: ListView(
-        scrollDirection: Axis.horizontal,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            crossAxisAlignment: CrossAxisAlignment.center,
-            spacing: 20,
-            children: [
-              _customCard(
-                icon: Icon(Icons.cable_sharp, color: ThemeColor.primaryColor),
-                text: Text("Transfer"),
-              ),
-              _customCard(
-                icon: Icon(Icons.attach_money, color: ThemeColor.primaryColor),
-                text: Text("Pay Bills"),
-              ),
-              _customCard(
-                icon: Icon(
-                  Icons.payments_outlined,
-                  color: ThemeColor.primaryColor,
-                ),
-                text: Text("Invest"),
-              ),
-            ],
+  SingleChildScrollView _navigationCards() {
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Center(
+        child: ConstrainedBox(
+          constraints: BoxConstraints(
+            minWidth: MediaQuery.of(context).size.width,
           ),
-        ],
+          child: Padding(
+            padding: const EdgeInsets.all(16),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              spacing: 20,
+              children: [
+                _customCard(
+                  icon: Icon(Icons.cable_sharp, color: ThemeColor.primaryColor),
+                  text: Text("Transfer"),
+                ),
+                _customCard(
+                  icon: Icon(
+                    Icons.attach_money,
+                    color: ThemeColor.primaryColor,
+                  ),
+                  text: Text("Pay Bills"),
+                ),
+                _customCard(
+                  icon: Icon(
+                    Icons.payments_outlined,
+                    color: ThemeColor.primaryColor,
+                  ),
+                  text: Text("Invest"),
+                ),
+              ],
+            ),
+          ),
+        ),
       ),
     );
   }
